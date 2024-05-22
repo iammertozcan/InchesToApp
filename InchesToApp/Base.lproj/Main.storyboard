@@ -15,47 +15,96 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tpD-Ks-hc4">
-                                <rect key="frame" x="139" y="186" width="97" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="in inches" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Z2-g8-3Z7">
-                                <rect key="frame" x="167" y="264" width="68" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="hjo-aR-nWC">
-                                <rect key="frame" x="95" y="318" width="188" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="hjo-aR-nWC">
+                                <rect key="frame" x="17" y="307" width="341" height="32"/>
                                 <segments>
                                     <segment title="Feet"/>
                                     <segment title="Meters"/>
                                     <segment title="Miles"/>
                                 </segments>
                             </segmentedControl>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O0o-Lo-S4o">
-                                <rect key="frame" x="148" y="401" width="80" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O0o-Lo-S4o">
+                                <rect key="frame" x="17" y="582" width="341" height="65"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="ypZ-8T-Ch8"/>
+                                </constraints>
+                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Update"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Convert">
+                                    <fontDescription key="titleFontDescription" name="Futura-Bold" family="Futura" pointSize="25"/>
+                                    <color key="baseForegroundColor" red="0.90388572219999996" green="0.75689178710000005" blue="0.25865685939999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="updateButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S9O-wZ-9nZ"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Click Update for the answer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XIP-Jd-Bt4">
-                                <rect key="frame" x="83" y="503" width="211" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XIP-Jd-Bt4">
+                                <rect key="frame" x="17" y="357" width="341" height="39"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="0.0">
+                                        <attributes>
+                                            <font key="NSFont" size="30" name="Futura-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="InchesToApp" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aXb-Gq-v6f">
+                                <rect key="frame" x="52" y="86" width="271" height="52"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="40"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="in /  inches" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tpD-Ks-hc4">
+                                <rect key="frame" x="57" y="258" width="301" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="number.square.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="2EK-Ja-Tap">
+                                <rect key="frame" x="16" y="252.5" width="41" height="44.5"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="41" id="mVM-6G-ogX"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.90777653459999996" green="0.75687986610000002" blue="0.25857555869999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="tpD-Ks-hc4" firstAttribute="leading" secondItem="2EK-Ja-Tap" secondAttribute="trailing" id="3om-WQ-JXU"/>
+                            <constraint firstItem="aXb-Gq-v6f" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="66" id="9rS-if-A1k"/>
+                            <constraint firstItem="XIP-Jd-Bt4" firstAttribute="trailing" secondItem="O0o-Lo-S4o" secondAttribute="trailing" id="KmQ-Nh-GUq"/>
+                            <constraint firstItem="XIP-Jd-Bt4" firstAttribute="leading" secondItem="O0o-Lo-S4o" secondAttribute="leading" id="PRu-ff-xem"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="O0o-Lo-S4o" secondAttribute="bottom" constant="20" id="T0T-Fm-5ge"/>
+                            <constraint firstItem="2EK-Ja-Tap" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="WOd-4k-sEl"/>
+                            <constraint firstItem="XIP-Jd-Bt4" firstAttribute="top" secondItem="hjo-aR-nWC" secondAttribute="bottom" constant="19" id="ZMc-19-gPn"/>
+                            <constraint firstItem="2EK-Ja-Tap" firstAttribute="centerY" secondItem="tpD-Ks-hc4" secondAttribute="centerY" id="cR5-u1-Lno"/>
+                            <constraint firstItem="hjo-aR-nWC" firstAttribute="leading" secondItem="XIP-Jd-Bt4" secondAttribute="leading" id="hol-oq-d3q"/>
+                            <constraint firstItem="tpD-Ks-hc4" firstAttribute="trailing" secondItem="hjo-aR-nWC" secondAttribute="trailing" id="ibz-gS-Jz7"/>
+                            <constraint firstItem="hjo-aR-nWC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="17" id="jbd-v2-fIU"/>
+                            <constraint firstItem="hjo-aR-nWC" firstAttribute="top" secondItem="2EK-Ja-Tap" secondAttribute="bottom" constant="8.5" id="kGL-mh-uVv"/>
+                            <constraint firstItem="hjo-aR-nWC" firstAttribute="trailing" secondItem="XIP-Jd-Bt4" secondAttribute="trailing" id="p09-N4-OOT"/>
+                            <constraint firstItem="aXb-Gq-v6f" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="p4I-i9-JIG"/>
+                            <constraint firstItem="aXb-Gq-v6f" firstAttribute="centerX" secondItem="hjo-aR-nWC" secondAttribute="centerX" id="rOi-NJ-Isy"/>
+                            <constraint firstItem="2EK-Ja-Tap" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="251.5" id="w6t-AB-T06"/>
+                            <constraint firstItem="hjo-aR-nWC" firstAttribute="top" secondItem="tpD-Ks-hc4" secondAttribute="bottom" constant="15" id="zqX-wP-lyV"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="inputField" destination="tpD-Ks-hc4" id="Lgl-9K-3a8"/>
@@ -65,7 +114,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="13" y="4"/>
+            <point key="canvasLocation" x="12" y="3.1484257871064472"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="number.square.fill" catalog="system" width="128" height="114"/>
+    </resources>
 </document>
