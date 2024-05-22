@@ -42,7 +42,7 @@ double convertInchesToMiles(double inches) {
     if (self.segmentController.selectedSegmentIndex == 0) {
         double feet = convertInchesToFeet(userInput);
         [buf appendString: [@(feet) stringValue]];
-    } else if (self.segmentController.selectedSegmentIndex == 1){
+    } else if (self.segmentController.selectedSegmentIndex == 1) {
         double meters = convertInchesToMeters(userInput);
         [buf appendString: [@(meters) stringValue]];
     } else {
@@ -55,6 +55,7 @@ double convertInchesToMiles(double inches) {
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self.segmentController setTitleTextAttributes:@{NSFontAttributeName:[UIFont fontWithName:@"Futura-Bold" size:14.0]} forState:UIControlStateNormal];
 }
 
 
