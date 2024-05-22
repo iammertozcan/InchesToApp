@@ -25,7 +25,7 @@ To get started with the project, follow these steps:
 https://github.com/iammertozcan/InchesToApp.git
 ```
 2. Open the project in your preferred IDE (e.g., Xcode).
-3. Run the `DistCalApp.xcodeproj` file.
+3. Run the `InchesToApp.xcodeproj` file.
 4. Start using the application to convert measurements!
 
 ## Usage
